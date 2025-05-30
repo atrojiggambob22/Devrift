@@ -7,12 +7,33 @@ import mainWha from '../public/Images/mainWha.png';
 import X from '../public/Images/x.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed,faToilet,faSquare,faBuilding,faWarehouse,faHome,faStore,faHouseChimney, faStar, faStarHalf, faLocation, faLocationPin, faLocationPinLock, faMapLocationDot, faLocationArrow, faMailBulk, faPhone, faArrowRight, faAdd} from '@fortawesome/free-solid-svg-icons'; 
-
+// import { motion } from "motion/react"
+// import { motion, useScroll } from "framer-motion";
+import ScrollIndicator from "./ScrollIndicator";
 import House from '/Images/House1.png'
+import FadeInSection from "./FadeInSection";
+
+
 const Devrift =() =>{
+
+
+// const { scrollYProgress } = useScroll()
+
+// const scrollIndicator = {
+//     scaleX: scrollYProgress,
+//     position: "fixed",
+//     top: 0,
+//     left: 0,
+//     right: 0,
+//     height: "10px",
+//     originX: 0,
+//     backgroundColor: "#ff0088",
+// }
 
     return(
        <div >
+        <ScrollIndicator />
+         {/* <motion.div id="scroll-indicator" style="scrollIndicator" /> */}
              <MainRift/>
        </div>
 
@@ -25,6 +46,7 @@ const MainRift =()=>{
         <>
         
         <div>
+            
             <div className="header">
                     <header>
             <div className="hheadspfonavs">
@@ -96,6 +118,7 @@ const MainRift =()=>{
 
 
              <div className="Liners">
+                
                         <div>
                             <h3>2000 <FontAwesomeIcon icon={faAdd} style={{color:'green', fontSize:'30px'}} /> </h3>
                             <p>Category</p>
@@ -128,8 +151,9 @@ const MainRift =()=>{
                         </div> */}
 
                     <div className="IDeas">
-                       
-                        <div className="IdeasmINin">
+                        <FadeInSection delay={0.6}>
+
+                                <div className="IdeasmINin">
                             <div>
                                 <h3>Turning Ideas into <br />Masterpeices</h3>
                                 <div className="iininfinpingdom">
@@ -145,6 +169,8 @@ const MainRift =()=>{
 
                                 
                         </div>
+                        </FadeInSection>
+                        
                         <div>
                             
                              
@@ -152,19 +178,29 @@ const MainRift =()=>{
                     </div>
 
                     <div className="Services" style={{overflow:"hidden"}}>
-                        <div style={{position:'relative', left:'120px'}}>
+                        <FadeInSection delay={0.2}>
+
+                            <div style={{position:'relative', left:'120px'}}>
                             <div style={{marginBottom:"20px"}}>
                                 <h3 >Our <span  className="bentServ" style={{backgroundColor:'darkgreen', color:'white'}}> Services</span></h3>
                                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto sed autem perspiciatis fuga dignissimos facere!</p>
                             </div>
                             <div>
-                                <div className="minsib1serv minsib1serv1 ">
+                                <FadeInSection delay={0.3}>
+                                         <div className="minsib1serv minsib1serv1 ">
                                     <div>01</div>
                                     <div>UI/UX</div>
                                     <div className="arricon">
                                         <FontAwesomeIcon icon={faArrowRight}  />    
                                      </div>
                                 </div>
+
+                                </FadeInSection>
+
+                                
+
+
+                                <FadeInSection delay={0.4}>
                                 <div className="minsib1serv minsib1serv2 ">
                                     <div>02</div>
                                     <div>Web Development</div>
@@ -172,6 +208,11 @@ const MainRift =()=>{
                                         <FontAwesomeIcon icon={faArrowRight} />    
                                      </div>
                                 </div>
+
+                                </FadeInSection>
+
+                                    <FadeInSection delay={0.5}>
+
                                 <div className="minsib1serv minsib1serv1">
                                     <div>03</div>
                                     <div>3D Design's</div>
@@ -179,6 +220,10 @@ const MainRift =()=>{
                                         <FontAwesomeIcon icon={faArrowRight}/>    
                                      </div> 
                                 </div>
+                                    </FadeInSection>
+
+                                    <FadeInSection delay={0.6}>
+
                                 <div className="minsib1serv minsib1serv2">
                                     <div>04</div>
                                     <div>Motion Graohics</div>
@@ -186,18 +231,23 @@ const MainRift =()=>{
                                         <FontAwesomeIcon icon={faArrowRight}/>    
                                      </div>
                                 </div>
+                                    </FadeInSection>
                             </div>
                         </div>
+                        </FadeInSection>
+                        
 
                         <div style={{display:"flex",gap:"1px",justifyContent:'space-around',position:"relative", left:'120px',overflow:"hidden", top:"40px"}}>
                             <div style={{marginRight:"20px"}}>
                                 <img src={House} alt=""  style={{width:"300px",height:"80%", borderRadius:"30px", position:"relative", left:'-50px', margin:" 0 80px"}}/>
                             </div>
+
                             <div style={{position:"relative", left:'20px', top:"50px"}}>
+                                
                                 <div style={{marginBottom:'50px'}} className="boxipfinon">
                                     <div className="insidesbox">
-
-                                            <div>
+                                                <FadeInSection delay={0.7}>
+                                                     <div>
                                                     <p style={{width:'80%'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, consequuntur!</p>
                                             </div>
 
@@ -205,12 +255,19 @@ const MainRift =()=>{
                                                 <h4>See how we work</h4>
                                                  {/* <div> <FontAwesome icon={}/> </div> */}
                                             </div>
+
+                                                </FadeInSection>
+                                           
                                     </div>
                                     
                                  </div>
 
 
+                                <FadeInSection delay={0.7}>
                                <div className="boxipfinon boxipfion22">
+
+                                    
+                               
                                     <div className="insidesbox2" >
                                     <p style={{width:'80%'}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, consectetur.</p>
                                 <div>
@@ -225,7 +282,7 @@ const MainRift =()=>{
                                 </div>
 
                                </div>
-                               
+                                </FadeInSection>
                                 
                             </div>
                         </div>
@@ -242,6 +299,7 @@ const MainRift =()=>{
                         
                         </div>
                     </div>
+
                     <div style={{display:'flex', flexDirection:"column"}}>
                         <hr style={{marginTop:'40px'}} />
                         {/* <FontAwesomeIcon icon={faStar}/>
@@ -269,18 +327,29 @@ const MainRift =()=>{
                 <footer>
                     <div className="firstminfooteddr">
                     <div>
+                         <FadeInSection delay={0.4}>
+
                         <div>
                             <h3 style={{marginBottom:'30px',fontSize:'50px'}}>Get In Touch Today</h3>
                             <p style={{marginBottom:'30px',fontSize:'20px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ad et pariatur sequi numquam quia eum placeat sint beatae repellat?</p>
                         </div>
+
+                         </FadeInSection>
+
+                          <FadeInSection delay={0.6}>
+
                         <div className="minformsnsnfooter">
                             <input type="text" placeholder="Enter Your Email" />
                             <button >Submit</button>
                         </div>
+                          </FadeInSection>
                     </div>
-                    <div>
+                     <FadeInSection delay={0.6}>
+                         <div>
                         <img src={House} alt="" />
                     </div>
+                     </FadeInSection>
+                   
                     </div>
 
                     <div>
